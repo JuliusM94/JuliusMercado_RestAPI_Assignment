@@ -1,9 +1,5 @@
 console.log("Welcome to, Merriam-Webster Dictionary API!");
 
-
-
-
-
 // API Key = 46ac3ec6-4aa6-447c-977a-765d26a646d5
 
 async function getData() {
@@ -32,7 +28,7 @@ async function getDefinition() {
             const definition = data[0].shortdef[0];
             const anotherDefinition = data[0].shortdef[1];
             // const pronounciation = audio[0];
-            myResult.innerHTML = `<h2>Here's the definition you are looking for the word, "${word}"</h2><br>${anotherDefinition}</br><br>${definition}</br>`;
+            myResult.innerHTML = `<h2>Here's the definition you are looking for the word, "${word}"</h2><br>• ${anotherDefinition}</br><br>• ${definition}</br>`;
         } else {
             myResult.innerHTML = '<p>No definition found.</p>';
         }
